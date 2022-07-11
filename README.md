@@ -1,5 +1,8 @@
 # arm-terraform
 
+This docker image leveraging on Terraform and also Google Distroless Image(https://github.com/GoogleContainerTools/distroless/blob/main/base/README.md)
+
+
 Step:
 1. Clone this git
 2. run "docker build -t wongchuinhun/terraform:latest" to build the image
