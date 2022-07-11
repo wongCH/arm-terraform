@@ -9,7 +9,7 @@ This docker image leveraging on Terraform and also Google Distroless Image(https
 3. run "docker run -it --rm wongchuinhun/terraform -v $(pwd):/terraform version
 
 
-NOTE: I don't like to run the entire docker command, instead i am using alias.
+NOTE: I don't like to run the entire docker command line, instead i am using alias.
 ### Adding Alias:
 1. edit the zshrc file ("nano ~/.zshrc:)
 
