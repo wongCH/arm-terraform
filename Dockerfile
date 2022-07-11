@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM debian:stable
 
+
+RUN apt-get update && apt-get install -y gnupg software-properties-common wget -y unzip -y
 WORKDIR /terraform
- 
-RUN apt-get update &&  apt-get install -y gnupg software-properties-common curl
-RUN curl -fsSL https://apt.releases.hashicorp.com/gpg |  apt-key add -
-RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-RUN apt-get update &&  apt-get install terraform
- 
-ENTRYPOINT ["/bin/terraform"]
+RUN wget "https://releases.hashicorp.com/terraform/1.2.4/terraform_1.2.4_linux_arm64.zip" -O temp.zip
+RUN unzip temp.zip
+RUN rm temp.zip
+RUN mv terraform /usr/local/bin/
+ENTRYPOINT [ "terraform" ]
