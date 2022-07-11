@@ -6,11 +6,17 @@ This docker image leveraging on Terraform and also Google Distroless Image(https
 ##Step:
 1. Clone this git
 2. run "docker build -t wongchuinhun/terraform" to build the image
-3. run "docker run -it --rm wongchuinhun/terraform:latest -v $(pwd):/terraform version
+3. run "docker run -it --rm wongchuinhun/terraform -v $(pwd):/terraform version
 
-NOTE:
+
+NOTE: I don't like to run the entire docker command, instead i am using alias.
 ### Adding Alias:
-alias tf="docker run -it --rm -v $(pwd):/terraform wongchuinhun/terraform"
+1. edit the zshrc file ("nano ~/.zshrc:)
+
+2. add the following alias:
+alias t="docker run -it --rm -v $(pwd):/terraform wongchuinhun/terraform"
 
 ##To use alias:
-tf init
+1. go to your terraform working folder,
+2. in the "terminal" (i am using visual code), run the following command:
+t init
