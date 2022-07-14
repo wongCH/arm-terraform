@@ -4,7 +4,7 @@ This docker image leveraging on Terraform and also Google Distroless Image(https
 
 
 ##Step:
-1. Clone this git
+1. Clone this repo
 2. run "docker build -t wongchuinhun/terraform ." to build the image (remember to run the command where the Dockerfile is). Please replace the tag(-t) that belong to your docker hub id.
 3. run "docker run -it --rm -v $(pwd):/terraform -w /terraform wongchuinhun/terraform version"
 
